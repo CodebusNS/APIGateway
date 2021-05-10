@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Ocelot";
+}
+
+@section css{
+    <style>
+        #tips {
+            background-color: rgb(237,237,237);
+            padding: 8px 18px;
+            margin-top: 30px;
+        }
+
+        #controls {
+            margin-top: 25px;
+        }
+
+        #discoveryProviders {
+            margin-top: 25px;
+        }
+
+            #discoveryProviders table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+                #discoveryProviders table td {
+                    border-top: 1px solid rgb(220,220,220);
+                    padding: 12px 0;
+                    text-align: left;
+                }
+    </style>
+}
+
+<div id="app">
+    <div id="tips">
+        <p class="appTitle">SERVICE DISCOVERY</p>
+        <p class="appSubTitle">You can add Ocelot or Eureka to manage your service uniformly.</p>
+    </div>
+
+    <div id="controls">
+        <div id="addNewProvider">
+            <button class="greenControlButton">+ ADD NEW PROVIDER</button>
+        </div>
+    </div>
+
+    <div id="discoveryProviders">
+        <table>
+            <tr style="color:rgb(90,115,142);font-size:14px;">
+                <td style="width:50px;"></td>
+                <td>TYPE</td>
+                <td>HOST</td>
+                <td>PORT</td>
+                <td>ENABLE</td>
+                <td>STATUS</td>
+                <td style="width:35px;"></td>
+                <td style="width:50px;"></td>
+            </tr>
+            <tr style="color:rgb(73,143,204);font-size:13px;">
+                <td style="width:50px;"></td>
+                <td>ocelot</td>
+                <td>localhost</td>
+                <td>8081</td>
+                <td>
+                    <div class="enableFlagButton">
+                        <img src="~/imgs/enable.png" />
+                        <span>enable</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="activeFlagButton">
+                        <img src="~/imgs/active.png" />
+                        <span>active</span>
+                    </div>
+                </td>
+                <td>
+                    <img src="~/imgs/edit.png" style="width:20px;" />
+                </td>
+                <td>
+                    <img src="~/imgs/delete.png" style="width:20px;" />
+                </td>
+            </tr>
+            <tr style="color:rgb(40,40,40);font-size:13px;">
+                <td style="width:50px;"></td>
+                <td>eureka</td>
+                <td>localhost</td>
+                <td>8082</td>
+                <td></td>
+                <td>
+                    <div class="failFlagButton">
+                        <img src="~/imgs/fail.png" />
+                        <span>fail</span>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>

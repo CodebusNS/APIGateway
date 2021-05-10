@@ -3,11 +3,11 @@ using Microsoft.Extensions.Logging;
 
 namespace APIGateway.Dashboard.Controllers
 {
-    public class HomeController : Controller
+    public class DiscoveryProviderController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public DiscoveryProviderController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }

@@ -1,0 +1,170 @@
+﻿html body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav {
+    background-color: rgb(43,63,83);
+    float: left;
+    height: 100vh;
+    width: 260px;
+    position: relative;
+}
+
+.body {
+    background-color: rgb(249,249,249);
+    height: 100vh;
+    margin-left: 260px;
+    position: relative;
+}
+
+.head {
+    background-color: white;
+    height: 64px;
+    box-shadow: 0 3px 10px -3px rgb(200,200,200);
+}
+
+.content {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.navTitle {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: rgb(240,240,240);
+    font-weight: 700;
+    background-color: rgb(35,50,66);
+    padding-left: 10px;
+    vertical-align: middle;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+.bottom {
+    height: 32px;
+    background-color: rgb(237,237,237);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px solid rgb(220,220,220);
+}
+
+#items {
+}
+
+.titleItem {
+}
+
+    .titleItem p {
+        margin: 0;
+        padding: 0;
+        color: rgb(220,220,220);
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+.item {
+    color: rgb(240,240,240);
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    cursor: default;
+}
+
+    .item span {
+        font-size: 12px;
+        padding-left: 10px;
+        position: relative;
+        top: -3px;
+    }
+
+    .item img {
+        width: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .item:hover {
+        background-color: rgb(51,76,101);
+    }
+
+
+.appTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(40,40,40);
+}
+
+.appSubTitle {
+    color: rgb(130,130,130);
+    font-size: 13px;
+}
+
+.greenControlButton {
+    background-color: rgb(26,187,156);
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    color: white;
+    box-shadow: 3px 3px 3px rgb(200,200,200);
+}
+
+.enableFlagButton {
+    color: rgb(26,187,156);
+    border: 1px solid rgb(26,187,156);
+    border-radius: 8px;
+    padding: 1px 8px;
+    background-color: transparent;
+    font-size: 12px;
+    display:inline-block;
+    position: relative;
+}
+
+    .enableFlagButton img {
+        width: 10px;
+        position: relative;
+        top: 1px;
+    }
+
+.activeFlagButton {
+    color: rgb(26,187,156);
+    border: 1px solid rgb(26,187,156);
+    border-radius: 8px;
+    padding: 1px 10px;
+    background-color: transparent;
+    width: 50px;
+    font-size: 12px;
+}
+
+    .activeFlagButton img {
+        width: 10px;
+        position: relative;
+        top: 1px;
+    }
+
+.failFlagButton {
+    color: rgb(255,73,97);
+    border: 1px solid rgb(255,73,97);
+    border-radius: 10px;
+    padding: 1px 10px;
+    background-color: transparent;
+    width: 50px;
+    font-size: 12px;
+}
+
+    .failFlagButton img {
+        width: 10px;
+        position: relative;
+        top: 1px;
+    }
+
+    .failFlagButton span {
+        padding-left: 7px;
+    }
