@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APIGateway - @ViewData["Title"] </title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    @RenderSection("css",false)
+</head>
+<body>
+    <div id="nav" class="nav">
+        <p class="navTitle">API Gateway</p>
+        <div id="items">
+            <div class="item">
+                <img src="~/imgs/dashboard.png" /><span>DASHBOARD</span>
+            </div>
+            <div class="item">
+                <img src="~/imgs/service-provider.png" /><span>DISCOVER PROVIDER</span>
+            </div>
+            <div class="titleItem">
+                <p>API GATEWAY</p>
+                <div class="item">
+                    <img src="~/imgs/services.png" /><span>SERVICES</span>
+                </div>
+                <div class="item">
+                    <img src="~/imgs/routes.png" /><span>ROUTES</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="body" class="body">
+        <div id="head" class="head">
+            <div>
+                
+            </div>
+        </div>
+
+        <div id="content" class="content">
+            @RenderBody()
+        </div>
+
+        <div id="bottom" class="bottom">
+
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</body>
+</html>
