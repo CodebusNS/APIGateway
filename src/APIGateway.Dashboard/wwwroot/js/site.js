@@ -1,8 +1,9 @@
 ﻿/// <reference path="../lib/jquery/dist/jquery.js" />
 /// <reference path="../lib/jquery-cookie/jquery.cookie.js" />
 $(function () {
-    let path = $.cookie("path");
-    if (path == undefined || path == null) {
+
+    let path = window.location.pathname.split("/")[1];
+    if (path == undefined || path == null || path == "") {
         $("div [path=home]").addClass("item_focus");
     }
     else {
@@ -11,7 +12,6 @@ $(function () {
 
     $(".item").click(function () {
         let path = $(this).attr("path");
-        $.cookie("path", path);
         window.location.href = path;
     });
 })
