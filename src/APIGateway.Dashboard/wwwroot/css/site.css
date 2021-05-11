@@ -68,6 +68,10 @@
         padding-left: 10px;
     }
 
+.item_focus {
+    background-color: rgb(51,76,101);
+}
+
 .item {
     color: rgb(240,240,240);
     margin: 0;
@@ -123,7 +127,7 @@
     padding: 1px 8px;
     background-color: transparent;
     font-size: 12px;
-    display:inline-block;
+    display: inline-block;
     position: relative;
 }
 
