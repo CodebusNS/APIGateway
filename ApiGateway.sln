@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway.Portal", "src\AP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway.Core", "src\APIGateway.Core\APIGateway.Core.csproj", "{C424A6A7-BE40-437A-A8F4-398A87F4A6C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway.Dashboard", "src\APIGateway.Dashboard\APIGateway.Dashboard.csproj", "{F455DB24-32C5-4855-8B3C-460D46B1037A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway.Dashboard", "src\APIGateway.Dashboard\APIGateway.Dashboard.csproj", "{F455DB24-32C5-4855-8B3C-460D46B1037A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
