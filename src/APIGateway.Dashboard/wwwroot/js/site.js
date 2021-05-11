@@ -1,4 +1,17 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿/// <reference path="../lib/jquery/dist/jquery.js" />
+/// <reference path="../lib/jquery-cookie/jquery.cookie.js" />
+$(function () {
+    let path = $.cookie("path");
+    if (path == undefined || path == null) {
+        $("div [path=home]").addClass("item_focus");
+    }
+    else {
+        $("div [path=" + path + "]").addClass("item_focus");
+    }
 
-// Write your JavaScript code.
+    $(".item").click(function () {
+        let path = $(this).attr("path");
+        $.cookie("path", path);
+        window.location.href = path;
+    });
+})
