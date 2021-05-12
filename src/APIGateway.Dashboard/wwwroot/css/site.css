@@ -172,3 +172,9 @@
     .failFlagButton span {
         padding-left: 7px;
     }
+
+.cellTitle {
+    background-color: rgb(245,245,245);
+    padding: 12px 10px;
+    font-size: 13px;
+}
