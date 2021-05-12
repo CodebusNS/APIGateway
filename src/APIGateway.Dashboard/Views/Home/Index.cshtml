@@ -2,6 +2,66 @@
     ViewData["Title"] = "Home Page";
 }
 
+@section css{
+    <style>
+        #app {
+            margin-top: 30px;
+        }
+
+        .cellContent {
+            border: 1px solid rgb(230,230,230);
+            box-shadow: 0 0 3px rgb(200,200,200);
+        }
+
+        .cellTbContent {
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+        }
+
+            .cellTbContent td {
+                border-top: 1px solid rgb(220,220,220);
+                padding: 12px 10px;
+            }
+
+        .cellTdTitle {
+            color: rgb(90,115,142);
+            font-size: 14px;
+        }
+
+        .cellTdContent {
+            color: rgb(90,115,142);
+            font-size: 13px;
+        }
+    </style>
+}
+
 <div id="app">
-    <h2>hello world</h2>
+    <div id="baseInfo" class="cellContent">
+        <div class="cellTitle">
+            <span>GLOBAL INFO</span>
+        </div>
+        <table class="cellTbContent">
+            <tr>
+                <td class="cellTdTitle">BaseUrl</td>
+                <td class="cellTdContent">http://gateway.insipid.top</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">DownstreamScheme</td>
+                <td class="cellTdContent">HTTP</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">DownstreamHttpVersion</td>
+                <td class="cellTdContent">1.0</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">RequestIdKey</td>
+                <td class="cellTdContent">202105122252</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">DiscoveryProvider</td>
+                <td class="cellTdContent">Ocelot</td>
+            </tr>
+        </table>
+    </div>
 </div>
