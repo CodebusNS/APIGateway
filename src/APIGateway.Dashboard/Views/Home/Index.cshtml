@@ -33,11 +33,77 @@
             color: rgb(90,115,142);
             font-size: 13px;
         }
+
+        .colTitle {
+            color: rgb(90,115,142);
+            font-size: 13px;
+        }
+
+        .colContent {
+            color: rgb(50,50,50);
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        #dashBoard {
+            border: 1px solid rgb(230,230,230);
+            box-shadow: 0 0 3px rgb(200,200,200);
+        }
+
+            #dashBoard table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #dashBoard td {
+                width: 20%;
+                text-align: center;
+            }
+
+        #globalInfo {
+            margin-top: 20px;
+        }
+
+        .minCard {
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 348px;
+            display: inline-block;
+            overflow: hidden;
+        }
     </style>
 }
 
 <div id="app">
-    <div id="baseInfo" class="cellContent">
+    <div id="dashBoard" class="cellContent">
+        <div class="cellTitle">
+            <span>DASHBOARD</span>
+            <div style="float:right">
+                <span>Total Requests:</span>
+                <span>233K+</span>
+            </div>
+        </div>
+        <div style="background-color:white;padding:10px 15px;">
+            <table>
+                <tr>
+                    <td class="colTitle">INSTANCES</td>
+                    <td class="colTitle">SERVICES</td>
+                    <td class="colTitle">ACCEPTED</td>
+                    <td class="colTitle">HANDLED</td>
+                    <td class="colTitle">FAILED</td>
+                </tr>
+                <tr>
+                    <td class="colContent">1</td>
+                    <td class="colContent">13</td>
+                    <td class="colContent">1566</td>
+                    <td class="colContent">1550</td>
+                    <td class="colContent">6</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="globalInfo" class="cellContent">
         <div class="cellTitle">
             <span>GLOBAL INFO</span>
         </div>
@@ -62,6 +128,83 @@
                 <td class="cellTdTitle">DiscoveryProvider</td>
                 <td class="cellTdContent">Ocelot</td>
             </tr>
+        </table>
+    </div>
+
+    <div class="cellContent minCard" style="margin-left:0">
+        <div class="cellTitle">
+            <span>RATELIMIT OPTIONS</span>
+        </div>
+        <table class="cellTbContent">
+            <tr>
+                <td class="cellTdTitle">ClientIdHeader</td>
+                <td class="cellTdContent">1321231231313</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">QuotaExceededMessage</td>
+                <td class="cellTdContent">opss!</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">RateLimitCounterPrefix</td>
+                <td class="cellTdContent">12</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">DisableRateLimitHeaders</td>
+                <td class="cellTdContent">202105122252</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">HttpStatusCode</td>
+                <td class="cellTdContent">429</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="cellContent minCard">
+        <div class="cellTitle">
+            <span>DATABASE INFO</span>
+        </div>
+        <table class="cellTbContent">
+            <tr>
+                <td class="cellTdTitle">DBMS</td>
+                <td class="cellTdContent">MySql</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">Host</td>
+                <td class="cellTdContent">sql.insipid.top</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">Database</td>
+                <td class="cellTdContent">CodeBus-APIGateway</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">User</td>
+                <td class="cellTdContent">root</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">Port</td>
+                <td class="cellTdContent">3306</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="cellContent minCard" style="vertical-align:top">
+        <div class="cellTitle">
+            <span>QoSOPTIONS</span>
+        </div>
+        <table class="cellTbContent">
+            <tr>
+                <td class="cellTdTitle">ExceptionsAllowedBeforeBreaking</td>
+                <td class="cellTdContent">10</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">DurationOfBreak</td>
+                <td class="cellTdContent">10</td>
+            </tr>
+            <tr>
+                <td class="cellTdTitle">TimeoutValue</td>
+                <td class="cellTdContent">5</td>
+            </tr>
+
         </table>
     </div>
 </div>
