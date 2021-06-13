@@ -5,6 +5,10 @@
     {
       "library": "jquery-cookie@1.4.1",
       "destination": "wwwroot/lib/jquery-cookie/"
+    },
+    {
+      "library": "echarts@5.1.0",
+      "destination": "wwwroot/lib/echarts/"
     }
   ]
 }

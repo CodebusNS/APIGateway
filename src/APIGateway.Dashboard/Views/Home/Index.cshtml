@@ -3,15 +3,25 @@
 }
 
 @section css{
+
     <style>
         #app {
             margin-top: 30px;
+            padding-bottom: 30px;
         }
 
         .cellContent {
             border: 1px solid rgb(230,230,230);
             box-shadow: 0 0 3px rgb(200,200,200);
         }
+
+            .cellContent img[type=title] {
+                width: 16px;
+                margin-right: 3px;
+                vertical-align: middle;
+                position: relative;
+                top: -2px;
+            }
 
         .cellTbContent {
             width: 100%;
@@ -40,7 +50,7 @@
         }
 
         .colContent {
-            color: rgb(50,50,50);
+            color: rgb(80,80,80);
             font-size: 26px;
             font-weight: bold;
         }
@@ -74,9 +84,107 @@
     </style>
 }
 
+@section js{
+    <script src="~/lib/echarts/echarts.js"></script>
+    <script>
+        var chartDom = document.getElementById('requestDetail');
+        var myChart = echarts.init(chartDom);
+        var option = {
+            title: {
+                text: ''
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            legend: {
+                data: ['GET', 'POST', 'PUT', 'DELETE']
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['05/09', '05/10', '05/11', '05/11', '05/12', '05/13', '05/14']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: 'GET',
+                    type: 'line',
+                    stack: 'total',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name: 'POST',
+                    type: 'line',
+                    stack: 'total',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name: 'PUT',
+                    type: 'line',
+                    stack: 'total',
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name: 'DELETE',
+                    type: 'line',
+                    stack: 'total',
+                    label: {
+                        show: true,
+                        position: 'top'
+                    },
+                    areaStyle: {},
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [820, 932, 901, 934, 1290, 1330, 1320]
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+}
+
 <div id="app">
     <div id="dashBoard" class="cellContent">
         <div class="cellTitle">
+            <img src="~/imgs/Statistics.png" type="title" />
             <span>DASHBOARD</span>
             <div style="float:right">
                 <span>Total Requests:</span>
@@ -105,6 +213,7 @@
 
     <div id="globalInfo" class="cellContent">
         <div class="cellTitle">
+            <img src="~/imgs/info.png" type="title" />
             <span>GLOBAL INFO</span>
         </div>
         <table class="cellTbContent">
@@ -133,6 +242,7 @@
 
     <div class="cellContent minCard" style="margin-left:0">
         <div class="cellTitle">
+            <img src="~/imgs/info.png" type="title" />
             <span>RATELIMIT OPTIONS</span>
         </div>
         <table class="cellTbContent">
@@ -161,6 +271,7 @@
 
     <div class="cellContent minCard">
         <div class="cellTitle">
+            <img src="~/imgs/info.png" type="title" />
             <span>DATABASE INFO</span>
         </div>
         <table class="cellTbContent">
@@ -189,6 +300,7 @@
 
     <div class="cellContent minCard" style="vertical-align:top">
         <div class="cellTitle">
+            <img src="~/imgs/info.png" type="title" />
             <span>QoSOPTIONS</span>
         </div>
         <table class="cellTbContent">
@@ -206,5 +318,13 @@
             </tr>
 
         </table>
+    </div>
+
+    <div id="globalInfo" class="cellContent">
+        <div class="cellTitle">
+            <img src="~/imgs/calls.png" type="title" style="width:18px;" />
+            <span>API CALLS</span>
+        </div>
+        <div id="requestDetail" style="width:100%; height:300px;border-top:1px solid rgb(220,220,220)"></div>
     </div>
 </div>
