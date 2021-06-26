@@ -44,6 +44,26 @@
             font-size: 13px;
         }
 
+        .cellInput {
+            border: none;
+            border-bottom: 1px solid rgb(200,200,200);
+            outline: none;
+            width: 300px;
+            font-size: 14px;
+        }
+
+        .cellSelect {
+            width: 300px;
+            outline: none;
+            padding: 3px 5px;
+            border: 1px solid rgb(200,200,200);
+        }
+
+        .cellInput:hover {
+            border-bottom: 1px solid rgb(26,187,156);
+            color: rgb(26,187,156);
+        }
+
         .colTitle {
             color: rgb(90,115,142);
             font-size: 13px;
@@ -80,6 +100,25 @@
             width: 348px;
             display: inline-block;
             overflow: hidden;
+        }
+
+        .editControl {
+            float: right;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-right: 3px;
+        }
+
+        button[outerText="EDIT"] {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: rgb(100,100,100);
+        }
+
+        .editControl button:hover {
+            cursor: pointer;
+            text-decoration: underline;
         }
     </style>
 }
@@ -212,30 +251,49 @@
     </div>
 
     <div id="globalInfo" class="cellContent">
-        <div class="cellTitle">
+        <div class="cellTitle" style="display:inline-block;">
             <img src="~/imgs/info.png" type="title" />
             <span>GLOBAL INFO</span>
+        </div>
+
+        <div class="editControl">
+            <button>EDIT</button>
+            <button hidden="hidden">DONE</button>
         </div>
         <table class="cellTbContent">
             <tr>
                 <td class="cellTdTitle">BaseUrl</td>
-                <td class="cellTdContent">http://gateway.insipid.top</td>
+                <td>
+                    <span class="cellTdContent" hidden="hidden"> http://gateway.insipid.top</span>
+                    <input type="text" value="" id="baseUrl" class="cellInput cellTdContent" />
+                </td>
             </tr>
             <tr>
                 <td class="cellTdTitle">DownstreamScheme</td>
-                <td class="cellTdContent">HTTP</td>
+                <td>
+                    <span class="cellTdContent" hidden="hidden">HTTP</span>
+                    <input type="radio" name="downLoadStreamScheme" value="http" id="radioHTTP" /><label for="radioHTTP" class="cellTdContent">HTTP</label>
+                    <input type="radio" name="downLoadStreamScheme" value="https" id="radioHTTPS" /><label for="radioHTTPS" class="cellTdContent">HTTPS</label>
+                </td>
             </tr>
             <tr>
                 <td class="cellTdTitle">DownstreamHttpVersion</td>
-                <td class="cellTdContent">1.0</td>
+                <td>
+                    <span class="cellTdContent" hidden="hidden">1.0</span>
+                    <input type="radio" name="downLoadHttpVersion" value="1" id="radioHTTP1" /><label for="radioHTTP1" class="cellTdContent">1.0</label>
+                    <input type="radio" name="downLoadHttpVersion" value="2" id="radioHTTP2" /><label for="radioHTTP2" class="cellTdContent">2.0</label>
+                </td>
             </tr>
-            <tr>
-                <td class="cellTdTitle">RequestIdKey</td>
-                <td class="cellTdContent">202105122252</td>
-            </tr>
+
             <tr>
                 <td class="cellTdTitle">DiscoveryProvider</td>
-                <td class="cellTdContent">Ocelot</td>
+                <td>
+                    <span class="cellTdContent" hidden="hidden">Ocelot</span>
+                    <select class="cellSelect cellTdContent">
+                        <option>Ocelot</option>
+                        <option>Eureka</option>
+                    </select>
+                </td>
             </tr>
         </table>
     </div>
