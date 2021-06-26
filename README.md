@@ -1,16 +1,19 @@
 # APIGateway
 
-`APIGateway`是一款基于`.NetCore + Ocelot`开发的一款智能API网关。在保留了`Ocelot`现有功能的情况下，我们新增了配置存储/读取方式、缓存配置存储/读取方式、自定义限流、鉴权、熔断等。 新增配置定时生效、配置实施修改生效、UI界面管理、调用链、集群功能等。`APIGateway` 简化了`Ocelot` 的配置方式（通过管理界面即可完成服务管理），如果说你们使用的技术栈为.NetCore，并且有想上微服务架构的意向，那么`APIGateway`将会是一个不错的选择。
+`APIGateway`是一款基于`.NetCore + Ocelot`开发的一款智能API网关（结合Consul/Eureka服务注册和服务发现）。在保留了`Ocelot`现有功能的情况下，我们新增了配置存储/读取方式（从local json扩展至DB）、缓存配置存储/读取方式（session扩展至Redis）、自定义限流、鉴权（OAuth2.0）、熔断等。 新增配置定时生效、配置实时修改生效、UI界面管理、调用链、集群功能等。`APIGateway` 简化了`Ocelot` 的配置方式（通过管理界面即可完成服务管理），如果说你们使用的技术栈为.NetCore，并且有想上微服务架构统一管理API的意向，那么`APIGateway`将会是一个不错的选择。
 
 # 框架组件介绍
 
-- APIGateway.Core：Api核心和Ocelot扩展组件
-  - Business：业务层，用于配置设置或读取
+- APIGateway.Core：ApiGateway核心层和Ocelot扩展组件
+  - Business：用于网关配置设置或读取
   - Common：通用层
-  - DbRepository：网关配置仓库
+  - DbRepository：网关配置ORM&DBContext仓库层
   - Model：模型层
   - OcelotAddin：基于Ocelot开发的扩展插件
 - APIGateway.Portal：提供网关管理WebApi
+- APIGateway.Dashboard：基于Asp.Net Core开发的网关前端管理页面
+
+> 前端开发者可结合自己的技术栈开发网关的UI管理层，通过调用APIGateway.Portal层实现APIGateway可视化管理
 
 # 首次使用
 

@@ -5,9 +5,9 @@ namespace APIGateway.Dashboard.Controllers
 {
     public class DiscoveryProviderController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<DashboardController> _logger;
 
-        public DiscoveryProviderController(ILogger<HomeController> logger)
+        public DiscoveryProviderController(ILogger<DashboardController> logger)
         {
             _logger = logger;
         }
